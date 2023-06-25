@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct estoque{
+    char nomePeca[15];
+    int num_peca;
+    float val;
+    int num_pedido;
+};
+
+int main(){
+    struct estoque e;
+    strcpy(e.nomePeca,"Engrenagem");
+    e.num_peca = 155;
+    e.val = 14.99;
+    e.num_pedido = 800;
+    
+    printf("Nome da peça: %s\n", e.nomePeca);
+    printf("Número da peça: %d\n", e.num_peca);
+    printf("Valor: %.2f\n", e.val);
+    printf("Número do pedido: %d\n", e.num_pedido);
+
+    return 0;
+}
