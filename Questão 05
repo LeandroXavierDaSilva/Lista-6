@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct professor{
+    char nome[15];
+    int eixo_ensinado;
+};
+
+struct disciplina{
+    char nome[15];
+    struct professor p;
+};
+
+int main(){
+    struct disciplina d;
+    strcpy(d.nome, "Laboratório");
+    strcpy(d.p.nome, "Daniel");
+    d.p.eixo_ensinado = 5;
+
+    printf("Disciplina: %s\n", d.nome);
+    printf("Professor: %s\n", d.p.nome);
+    printf("Eixo Ensinado: %d\n", d.p.eixo_ensinado);
+
+    return 0;
+}
